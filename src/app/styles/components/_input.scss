@@ -1,0 +1,70 @@
+@mixin input($height, $radius: 5px, $margin: 1em, $border: 1px) {
+	$borders: ($border * 2);
+	box-sizing: border-box;
+	width: 100%;
+	height: calc(#{$height} + #{$borders});
+	padding: $margin;
+	border: $border solid var(--color-grey-light-4);
+	border-radius: $radius;
+	background: white;
+	resize: none;
+	overflow: auto;
+	outline: none;
+	&[required] {
+		&:focus {
+			border-color: var(--color-primary);
+			+ label {
+				&[placeholder] {
+					&:before {
+						color: var(--color-primary);
+					}
+				}
+			}
+		}
+		&:focus,
+		&:valid {
+			+ label {
+				&[placeholder] {
+					&:before {
+						transition-duration: 0.2s;
+						transform: translate(0, ($margin * -1.5)) scale(0.9, 0.9);
+					}
+				}
+			}
+		}
+		&:invalid {
+			+ label {
+				&[placeholder] {
+					&[alt] {
+						&:before {
+							content: attr(alt);
+						}
+					}
+				}
+			}
+		}
+		+ label {
+			&[placeholder] {
+				display: block;
+				pointer-events: none;
+				line-height: $margin * 1.25;
+				margin-top: calc(-#{$height} - #{$borders});
+                margin-bottom: calc((#{$height} - #{$margin}) + #{$borders});
+                font-size: 11px;
+				&:before {
+					content: attr(placeholder);
+					display: inline-block;
+					margin: 0 calc(#{$margin} + #{$borders});
+					padding: 0 2px;
+					color: var(--color-grey-dark-3);
+					white-space: nowrap;
+					transition: 0.3s ease-in-out;
+					background-image: linear-gradient(to bottom, white, white);
+					background-size: 100% 5px;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+	}
+}

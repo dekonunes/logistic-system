@@ -1,0 +1,42 @@
+@mixin border-effect($_background: white, $_direction: left) {
+	@if ($_direction == "left") {
+		transform: skew(2deg, 2deg);
+	}
+	@if ($_direction == "right") {
+		transform: skew(-2deg, -2deg);
+	}
+	content: "";
+	position: absolute;
+	width: stretch;
+	height: stretch;
+	background: $_background;
+	z-index: -1;
+}
+
+@mixin hover {
+	@include lg-and-up {
+	  &:hover {
+		@content;
+	  }
+	}
+}
+
+@mixin darken($prop, $value, $amount) {
+	  #{$prop}: darken($value, $amount);
+}
+
+@mixin lighten($prop, $value, $amount) {
+	#{$prop}: lighten($value, $amount);
+}
+
+@mixin hover-darken($prop,$value, $amount: 7) {
+	@include hover {
+		@include darken($prop, $value, $amount);
+	}
+}
+  
+@mixin hover-lighten($prop,$value, $amount:7) {
+	@include hover {
+		@include lighten($prop, $value, $amount);
+	}
+}

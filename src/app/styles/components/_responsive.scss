@@ -1,0 +1,99 @@
+@import "../abstracts/responsive";
+
+$BREAKPOINTS: (
+  xs, sm, md, lg, xl, xxl
+);
+
+@mixin variation($breakpoint) {
+  .#{$breakpoint}-hide {
+    display: none !important;
+  }
+  .#{$breakpoint}-show {
+    display: block !important;
+  }
+}
+
+@include xs {
+  @include variation('xs')
+}
+
+@include xs-and-up {
+  @include variation('xs-and-up')
+}
+
+@include xs-and-down {
+  @include variation('xs-and-down')
+}
+
+@include sm {
+  @include variation('sm')
+}
+
+@include sm-and-up {
+  @include variation('sm-and-up')
+}
+
+@include sm-and-down {
+  @include variation('sm-and-down')
+}
+
+@include md {
+  @include variation('md')
+}
+
+@include md-and-up {
+  @include variation('md-and-up')
+}
+
+@include md-and-down {
+  @include variation('md-and-down')
+}
+
+@include lg {
+  @include variation('lg')
+}
+
+@include lg-and-up {
+  @include variation('lg-and-up')
+}
+
+@include lg-and-down {
+  @include variation('lg-and-down')
+}
+
+@include xl {
+  @include variation('xl')
+}
+
+@include xl-and-up {
+  @include variation('xl-and-up')
+}
+
+@include xl-and-down {
+  @include variation('xl-and-down')
+}
+
+@include xxl {
+  @include variation('xxl')
+}
+
+@include xxl-and-up {
+  @include variation('xxl-and-up')
+}
+
+@include xxl-and-down {
+  @include variation('xxl-and-down')
+}
+
+@include inf {
+  @include variation('inf')
+}
+
+@include inf-and-up {
+  @include variation('inf-and-up')
+}
+
+@include inf-and-down {
+  @include variation('inf-and-down')
+}
+

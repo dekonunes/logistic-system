@@ -1,0 +1,25 @@
+$width-items: 20%;
+
+.table {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+
+    &__header {
+        background: var(--color-primary-light);
+        font-weight: 700;
+        font-size: 16px;
+
+        &--item {
+            padding: 10px;
+        }
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--color-secondary-light);
+    }
+}
