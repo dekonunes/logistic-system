@@ -1,8 +1,8 @@
-$width-items: 20%;
-
 .table {
     font-family: 'Lato', sans-serif;
-    width: 100%;
+    width: 80%;
+    border: 1px solid var(--color-grey-light-3);
+    box-shadow: var(--shadow-card);
 
     &__header {
         background: var(--color-primary-light);
@@ -14,8 +14,12 @@ $width-items: 20%;
         }
     }
 
+    td {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
     td, th {
-        border: 1px solid #dddddd;
         text-align: center;
     }
 
