@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableModule } from './table/table.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TableModule } from './table/table.module';
   imports: [
     BrowserModule,
     TableModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

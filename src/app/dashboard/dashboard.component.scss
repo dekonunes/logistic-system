@@ -1,0 +1,20 @@
+@import "../styles/components";
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 11%;
+}
+
+.button-1 {
+    @include button($_type:  "raised");
+    height: 40px;
+    width: 166px;
+}
+
+.button-2 {
+    @include button();
+    height: 40px;
+    width: 166px;
+}

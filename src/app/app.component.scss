@@ -1,8 +1,1 @@
 @import "./styles/components";
-
-.test {
-    @include button($_type:  "raised");
-    height: 48px;
-    line-height: 48px;
-    width: 136px;
-}

@@ -11,12 +11,14 @@
 
         &--item {
             padding: 10px;
+            color: #FFF;
         }
     }
 
     td {
         font-size: 16px;
         padding: 10px 0;
+        color: var(--color-grey-dark-1);
     }
 
     td, th {

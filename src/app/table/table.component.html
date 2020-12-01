@@ -10,26 +10,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="row100 body">
-                <td class="cell100">1</td>
-                <td class="cell100">Bulba</td>
-                <td class="cell100">daa</td>
-                <td class="cell100">32</td>
-                <td class="cell100">65</td>
-            </tr>
-            <tr class="row100 body">
-                <td class="cell100">1</td>
-                <td class="cell100">Bulba</td>
-                <td class="cell100">daa</td>
-                <td class="cell100">32</td>
-                <td class="cell100">65</td>
-            </tr>
-            <tr class="row100 body">
-                <td class="cell100">1</td>
-                <td class="cell100">Bulba</td>
-                <td class="cell100">daa</td>
-                <td class="cell100">32</td>
-                <td class="cell100">65</td>
+            <tr *ngFor="let pokemon of pokemons;">
+                <td >{{pokemon.ID}}</td>
+                <td >{{pokemon.name}}</td>
+                <td >{{pokemon.types}}</td>
+                <td >{{pokemon.weight}}</td>
+                <td >{{pokemon.baseExperience}}</td>
             </tr>
         </tbody>
     </table>
