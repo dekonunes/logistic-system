@@ -8,13 +8,15 @@ import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableModule } from './table/table.module';
 import { HttpClientModule } from '@angular/common/http';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    GreetingComponent
   ],
   imports: [
     BrowserModule,
