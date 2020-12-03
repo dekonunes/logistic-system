@@ -1,8 +1,8 @@
 <div class="dashboard">
     <app-greeting class="md-and-up-hide"></app-greeting>
     <div class="buttons">
-        <button class="button-1">Request a quote</button>
-        <button class="button-2">Send us a message</button>
+        <button (click)="decrementPokemons()" class="button-1">Request a quote (-)</button>
+        <button (click)="incrementPokemons()" class="button-2">Send us a message (+)</button>
     </div>
-    <app-table></app-table>
+    <app-table [pokemons]="pokemons"></app-table>
 </div>

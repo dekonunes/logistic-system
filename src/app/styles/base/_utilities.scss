@@ -20,4 +20,9 @@
     text-orientation: upright;
 }
 
-.spacer-mobile { margin-bottom: 110px;}
+.spacer-mobile { margin-bottom: 110px; }
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}

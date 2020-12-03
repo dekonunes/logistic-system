@@ -7,7 +7,7 @@
 
     --color-secondary: #1c355e;
     @include darken(--color-secondary-dark, #1c355e, 30%);
-    @include lighten(--color-secondary-light, #1c355e, 60%);
+    --color-secondary-light: #169bd5;
 
     --color-grey-light-1: #FDFDFD;
     --color-grey-light-2: #f4f2f2;

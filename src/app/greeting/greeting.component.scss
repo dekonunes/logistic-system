@@ -1,3 +1,5 @@
+@import "../styles/components";
+
 .greeting {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@
 
     &__welcome {
         width: 100%;
-        padding: 15px 0 0 10px;
+        padding: 15px 0 0 5%;
 
         &--message {
             font-size: 2.4rem;
@@ -18,10 +20,28 @@
     }
 
     &__card {
+        display: flex;
+        justify-content: space-around;
         height: 120px;
         border-radius: 5px;
         background-color: var(--color-secondary);
-        width: 355px;
+        width: 90%;
         margin-top: 25px;
+        padding: 15px;
+
+        &--item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            &-icon {
+                @include pill (var(--color-secondary), white, 54px, 54px);
+            }
+
+            &-label {
+                font-size: 1.6rem;
+                color: #FFF;
+            }
+        }
     }
 }

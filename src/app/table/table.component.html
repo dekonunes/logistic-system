@@ -1,10 +1,12 @@
-<div style="margin: 2rem 0;display: flex;justify-content: center;">
+<div class="justify-center" style="margin: 2rem 0;">
     <table class="table">
         <thead class="table__header">
             <tr>
-                <th class="table__header--item" style="width: 4%;">ID</th>
+                <th class="table__header--item" (click)="reverse()" style="width: 5%;">
+                    ID <i class="icon-sort-numberic-desc"></i>
+                </th>
                 <th class="table__header--item" style="width: 30%;">Name</th>
-                <th class="table__header--item" style="width: 36%;">Types</th>
+                <th class="table__header--item" style="width: 35%;">Types</th>
                 <th class="table__header--item" style="width: 15%;">Weight</th>
                 <th class="table__header--item" style="width: 15%;">Base Experience</th>
             </tr>

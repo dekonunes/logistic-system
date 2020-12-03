@@ -11,7 +11,7 @@
 @mixin button($_color: var(--color-primary), $_type: "outline") {
 	@extend %button;
 	transition: all 200ms linear;
-	font-size: 1.6rem;
+	font-size: min(1.6rem, 15px);
 	@if ($_type == "raised") {
 		color: white;
 		border-radius: 5px;

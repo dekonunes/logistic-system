@@ -1,0 +1,13 @@
+@mixin pill ($_color, $_bg-color, $_height, $_width, $_boder: none) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $_bg-color;
+    height: $_height;
+    width: $_width;
+    padding: 0 10px;
+    border-radius: 50%;
+    border: $_boder;
+    color: $_color;
+    font-size: 2rem;
+}
